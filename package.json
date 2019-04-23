@@ -1,0 +1,22 @@
+{
+  "name": "deconstructing-the-web-browser",
+  "version": "0.1.0",
+  "description": "[PRESENTATION] Deconstructing the Modern Web Browser",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThirstyHead/deconstructing-the-web-browser.git"
+  },
+  "author": "Scott Davis <scott@thirstyhead.com>",
+  "license": "CC-BY-4.0",
+  "bugs": {
+    "url": "https://github.com/ThirstyHead/deconstructing-the-web-browser/issues"
+  },
+  "homepage": "https://github.com/ThirstyHead/deconstructing-the-web-browser#readme",
+  "devDependencies": {
+    "talk-o-vision": "github:thirstyhead/talk-o-vision"
+  }
+}
