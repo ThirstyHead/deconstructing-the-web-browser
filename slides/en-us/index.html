@@ -1,0 +1,817 @@
+<html lang="en"><head>
+    <title>Deconstructing the Modern Web Browser</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+                                   initial-scale=1,
+                                   user-scalable=yes">
+    <meta name="author" content="Scott Davis <scott@thirstyhead.com>">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/talk-o-vision.css">
+
+    <style>
+      .main-title{
+        background: url('slides/title/milk-and-butter.jpg') no-repeat center center;
+        background-size: contain;
+      }
+
+      .banner{
+        background-color: var(--theme-foreground-color);
+        opacity: 0.7;
+        top: 5vh;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 hidden="" aria-hidden="false"></h1>
+    <main class="slideshow">
+      <section class="main-title" id="1" data-src="slides/title">
+        <h2 hidden="" aria-hidden="false">Deconstructing the Modern Web Browser</h2>
+        <figure>
+          <div class="banner">
+            Deconstructing the Modern Web Browser 
+            <div class="subtitle">
+            </div>
+            <div class="bio">
+              <br>
+              Scott Davis<br>
+              <a href="mailto:scott@thirstyhead.com">scott@thirstyhead.com</a><br>
+              <a href="https://twitter.com/scottdavis99">@scottdavis99</a>
+            </div>
+          </div>
+          <figcaption>
+            <p>
+            </p>
+            <p>
+              Presented by Scott Davis. His email address is
+              scott@thirstyhead.com. His Twitter handle is @scottdavis99.
+            </p>
+          </figcaption>
+        </figure>
+      </section>
+      <!-- <section data-src="slides/instructions"></section> -->
+      <section class="theme-invert" id="2" data-src="slides/bio">
+        <h2 hidden="" aria-hidden="false">Biography</h2>
+        <audio src="slides/bio/audio.mp3"></audio>
+        <figure>
+          <img src="slides/bio/scott-davis-bio.png" alt="Scott Davis' Biography" class="contain">
+
+          <figcaption>
+           <p>Hi! My name is Scott Davis. I'm currently a Principle Engineer
+             with ThoughtWorks. Before that, I ran a software consultancy out
+             of Denver, Colorado called ThirstyHead. </p>
+
+           <p>I've been writing about web development for years -- articles
+             for IBM, books for O'Reilly and the Pragmatic Bookshelf, and most
+             recently videos for O'Reilly as well.</p>
+          </figcaption>
+        </figure>
+      </section>
+      <section id="3" data-src="slides/fresh-butter">
+        <h2 hidden="" aria-hidden="false">Fresh Butter</h2>
+        <figure>
+          <a href="http://maxumfoods.com/amf-leads-dairy-price-ease/">
+          <img src="slides/fresh-butter/fresh-butter.jpg" alt="Fresh Butter" class="contain" data-src="http://maxumfoods.com/amf-leads-dairy-price-ease/">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="4" data-src="slides/heavy-cream">
+        <h2 hidden="" aria-hidden="false">Heavy Cream</h2>
+        <figure>
+          <a href="https://www.myrecipes.com/extracrispy/this-diy-heavy-cream-substitute-has-only-two-ingredients">
+          <img src="slides/heavy-cream/heavy-cream.jpg" alt="Heavy Cream" class="contain" data-src="https://www.myrecipes.com/extracrispy/this-diy-heavy-cream-substitute-has-only-two-ingredients">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="5" data-src="slides/whipped-cream">
+        <h2 hidden="" aria-hidden="false">Whipped Cream</h2>
+        <figure>
+          <a href="https://cdn-image.myrecipes.com/sites/default/files/field/image/1811w-whipped-cream-getty.jpg">
+          <img src="slides/whipped-cream/whipped-cream.jpg" alt="Whipped Cream" class="contain" data-src="https://cdn-image.myrecipes.com/sites/default/files/field/image/1811w-whipped-cream-getty.jpg">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="6" data-src="slides/broken-whipped-cream">
+        <h2 hidden="" aria-hidden="false">Broken Whipped Cream</h2>
+        <figure>
+          <a href="https://toriavey.com/images/2013/06/Homemade-Butter-on-TheHistoryKitchen.com-vintage-cooking-tutorial--900x675.jpg">
+          <img src="slides/broken-whipped-cream/broken-whipped-cream.jpg" alt="Broken Whipped Cream" class="contain" data-src="https://toriavey.com/images/2013/06/Homemade-Butter-on-TheHistoryKitchen.com-vintage-cooking-tutorial--900x675.jpg">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="7" data-src="slides/butter-recipe">
+        <h2 hidden="" aria-hidden="false">Butter Recipe</h2>
+        <figure>
+          <a href="https://toriavey.com/toris-kitchen/homemade-butter/">
+          <img src="slides/butter-recipe/butter-recipe.png" alt="Butter Recipe" class="contain" data-src="https://toriavey.com/toris-kitchen/homemade-butter/<Paste>">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section class="theme-invert" id="8" data-src="slides/six-web-browsers">
+        <h2 hidden="" aria-hidden="false">Six Web Browsers</h2>
+        <figure>
+          <a href="https://password-managers.bestreviews.net/most-secure-browser-of-2018-for-password-management/">
+          <img src="slides/six-web-browsers/six-web-browsers.png" alt="Six Web Browsers" class="contain" data-src="https://password-managers.bestreviews.net/most-secure-browser-of-2018-for-password-management/">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="9" data-src="slides/browser-engines">
+        <h2 hidden="" aria-hidden="false">Browser Engines</h2>
+        <figure>
+          <a href="https://en.wikipedia.org/wiki/Comparison_of_browser_engines_(HTML_support)">
+          <img src="slides/browser-engines/browser-engines.png" alt="Browser Engines" class="contain" data-src="https://en.wikipedia.org/wiki/Comparison_of_browser_engines_(HTML_support)">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="10" data-src="slides/javascript-engines">
+        <h2 hidden="" aria-hidden="false">JavaScript Engines</h2>
+        <figure>
+          <a href="https://en.wikipedia.org/wiki/JavaScript_engine">
+          <img src="slides/javascript-engines/javascript-engines.png" alt="JavaScript Engines" class="contain" data-src="https://en.wikipedia.org/wiki/JavaScript_engine">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="11" data-src="slides/javascript-engines-2">
+        <h2 hidden="" aria-hidden="false">JavaScript Engines</h2>
+        <figure>
+          <a href="https://en.wikipedia.org/wiki/JavaScript_engine">
+          <img src="slides/javascript-engines-2/javascript-engines-2.png" alt="JavaScript Engines" class="contain" data-src="https://en.wikipedia.org/wiki/JavaScript_engine">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      
+      <section id="12" data-src="slides/title-html">
+        <h2 aria-hidden="false"><span class="highlight">HTML</span> Deep-Dive</h2>
+        <figure>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="13" data-src="slides/html-5.2-spec">
+        <h2 hidden="" aria-hidden="false">HTML 5.2 Spec</h2>
+        <figure>
+          <a href="https://www.w3.org/TR/html52/">
+          <img src="slides/html-5.2-spec/html-5.2-spec.png" alt="HTML 5.2 Spec" class="contain" data-src="https://www.w3.org/TR/html52/">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="14" data-src="slides/html-spec-toc">
+        <h2 hidden="" aria-hidden="false">HTML Spec - TOC</h2>
+        <figure>
+          <a href="https://www.w3.org/TR/html52/introduction.html#structure-of-this-specification">
+          <img src="slides/html-spec-toc/html-spec-toc.png" alt="HTML Spec - TOC" class="contain" data-src="https://www.w3.org/TR/html52/introduction.html#structure-of-this-specification">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="15" data-src="slides/html-spec-toc-2">
+        <h2 hidden="" aria-hidden="false">HTML Spec - TOC</h2>
+        <figure>
+          <a href="https://www.w3.org/TR/html52/introduction.html#structure-of-this-specification">
+          <img src="slides/html-spec-toc-2/html-spec-toc-2.png" alt="HTML Spec - TOC" class="contain" data-src="https://www.w3.org/TR/html52/introduction.html#structure-of-this-specification">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="16" data-src="slides/google-dom">
+        <h2 hidden="" aria-hidden="false">Google DOM</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          <img src="slides/google-dom/google-dom.png" alt="Google DOM" class="contain" data-src="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="17" data-src="slides/google-dom-2">
+        <h2 hidden="" aria-hidden="false">Google DOM</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          <img src="slides/google-dom-2/google-dom-2.png" alt="Google DOM" class="contain" data-src="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="18" data-src="slides/google-dom-3">
+        <h2 hidden="" aria-hidden="false">Google DOM</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          <img src="slides/google-dom-3/google-dom-3.png" alt="Google DOM" class="contain" data-src="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="19" data-src="slides/google-dom-4">
+        <h2 hidden="" aria-hidden="false">Google DOM</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          <img src="slides/google-dom-4/google-dom-4.png" alt="Google DOM" class="contain" data-src="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="20" data-src="slides/google-cssom">
+        <h2 hidden="" aria-hidden="false">Google CSSOM</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          <img src="slides/google-cssom/google-cssom.png" alt="Google CSSOM" class="contain" data-src="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="21" data-src="slides/google-cssom-2">
+        <h2 hidden="" aria-hidden="false">Google CSSOM</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          <img src="slides/google-cssom-2/google-cssom-2.png" alt="Google CSSOM" class="contain" data-src="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="22" data-src="slides/google-a11y-tree">
+        <h2 hidden="" aria-hidden="false">Google A11y Tree</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">
+          <img src="slides/google-a11y-tree/google-a11y-tree.png" alt="Google A11y Tree" class="contain" data-src="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="23" data-src="slides/google-a11y-tree-2">
+        <h2 hidden="" aria-hidden="false">Google A11y Tree</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">
+          <img src="slides/google-a11y-tree-2/google-a11y-tree-2.png" alt="Google A11y Tree" class="contain" data-src="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="24" data-src="slides/google-a11y-tree-3">
+        <h2 hidden="" aria-hidden="false">Google A11y Tree</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">
+          <img src="slides/google-a11y-tree-3/google-a11y-tree-3.png" alt="Google A11y Tree" class="contain" data-src="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="25" data-src="slides/google-a11y-tree-4">
+        <h2 hidden="" aria-hidden="false">Google A11y Tree</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">
+          <img src="slides/google-a11y-tree-4/google-a11y-tree-4.png" alt="Google A11y Tree" class="contain" data-src="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="26" data-src="slides/google-a11y-tree-5">
+        <h2 hidden="" aria-hidden="false">Google A11y Tree</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">
+          <img src="slides/google-a11y-tree-5/google-a11y-tree-5.png" alt="Google A11y Tree" class="contain" data-src="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="27" data-src="slides/google-a11y-tree-6">
+        <h2 hidden="" aria-hidden="false">Google A11y Tree</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">
+          <img src="slides/google-a11y-tree-6/google-a11y-tree-6.png" alt="Google A11y Tree" class="contain" data-src="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="28" data-src="slides/title-js">
+        <h2 aria-hidden="false"><span class="highlight">JavaScript</span> Deep-Dive</h2>
+        <figure>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="29" data-src="slides/ecmascript-wiki">
+        <h2 hidden="" aria-hidden="false">ECMAScript</h2>
+        <figure>
+          <a href="https://en.wikipedia.org/wiki/ECMAScript">
+          <img src="slides/ecmascript-wiki/ecmascript-wiki.png" alt="ECMAScript" class="contain" data-src="https://en.wikipedia.org/wiki/ECMAScript">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="30" data-src="slides/ecmascript-wiki-versions">
+        <h2 hidden="" aria-hidden="false">ECMAScript Versions</h2>
+        <figure>
+          <a href="https://en.wikipedia.org/wiki/ECMAScript#Versions">
+          <img src="slides/ecmascript-wiki-versions/ecmascript-wiki-versions.png" alt="ECMAScript Versions" class="contain" data-src="https://en.wikipedia.org/wiki/ECMAScript#Versions">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="31" data-src="slides/ecmascript-wiki-versions-2">
+        <h2 hidden="" aria-hidden="false">ECMAScript Versions</h2>
+        <figure>
+          <a href="https://en.wikipedia.org/wiki/ECMAScript#Versions">
+          <img src="slides/ecmascript-wiki-versions-2/ecmascript-wiki-versions-2.png" alt="ECMAScript Versions" class="contain" data-src="https://en.wikipedia.org/wiki/ECMAScript#Versions">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="32" data-src="slides/ecmascript-spec">
+        <h2 hidden="" aria-hidden="false">ECMAScript Spec</h2>
+        <figure>
+          <a href="http://www.ecma-international.org/ecma-262/9.0/index.html">
+          <img src="slides/ecmascript-spec/ecmascript-spec.png" alt="ECMAScript Spec" class="contain" data-src="http://www.ecma-international.org/ecma-262/9.0/index.html">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="33" data-src="slides/ecmascript-spec-web-scripting">
+        <h2 hidden="" aria-hidden="false">ECMAScript Web Scripting</h2>
+        <figure>
+          <a href="http://www.ecma-international.org/ecma-262/9.0/index.html#sec-web-scripting">
+          <img src="slides/ecmascript-spec-web-scripting/ecmascript-spec-web-scripting.png" alt="ECMAScript Web Scripting" class="contain" data-src="http://www.ecma-international.org/ecma-262/9.0/index.html#sec-web-scripting">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="34" data-src="slides/ecmascript-spec-reserved-words">
+        <h2 hidden="" aria-hidden="false">ECMAScript Spec Reserved Words</h2>
+        <figure>
+          <a href="http://www.ecma-international.org/ecma-262/9.0/index.html#sec-grammar-summary">
+          <img src="slides/ecmascript-spec-reserved-words/ecmascript-spec-reserved-words.png" alt="ECMAScript Spec Reserved Words" class="contain" data-src="http://www.ecma-international.org/ecma-262/9.0/index.html#sec-grammar-summary">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="35" data-src="slides/script-mdn">
+        <h2 hidden="" aria-hidden="false">Script MDN</h2>
+        <figure>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script&lt;Paste&gt;">
+          <img src="slides/script-mdn/script-mdn.png" alt="Script MDN" class="contain" data-src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="36" data-src="slides/script-mdn-defer">
+        <h2 hidden="" aria-hidden="false">Script MDN</h2>
+        <figure>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">
+          <img src="slides/script-mdn-defer/script-mdn-defer.png" alt="Script MDN" class="contain" data-src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section class="theme-invert" id="37" data-src="slides/bread-js">
+        <h2 hidden="" aria-hidden="false">Bread JS</h2>
+        <figure>
+<pre><code>
+&lt;script&gt;
+  window.addEventListener('load', init);
+
+  function init(){
+    let b = document.querySelector('button');
+    b.addEventListener('click', readIntro);
+  }
+
+  function readIntro(event){
+    let paragraphs = document.querySelectorAll('p');
+    for(let p of paragraphs){
+      let msg = new SpeechSynthesisUtterance(p.innerText);
+      window.speechSynthesis.speak(msg);
+    }
+  }
+&lt;/script&gt;
+&lt;button&gt;Read&lt;/button&gt;
+</code></pre>
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+
+      
+      <section id="38" data-src="slides/title-conclusion">
+        <h2 aria-hidden="false"><span class="highlight">Conclusion</span></h2>
+        <figure>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section class="theme-invert" id="39" data-src="slides/six-web-browsers">
+        <h2 hidden="" aria-hidden="false">Six Web Browsers</h2>
+        <figure>
+          <a href="https://password-managers.bestreviews.net/most-secure-browser-of-2018-for-password-management/">
+          <img src="slides/six-web-browsers/six-web-browsers.png" alt="Six Web Browsers" class="contain" data-src="https://password-managers.bestreviews.net/most-secure-browser-of-2018-for-password-management/">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="40" data-src="slides/browser-engines">
+        <h2 hidden="" aria-hidden="false">Browser Engines</h2>
+        <figure>
+          <a href="https://en.wikipedia.org/wiki/Comparison_of_browser_engines_(HTML_support)">
+          <img src="slides/browser-engines/browser-engines.png" alt="Browser Engines" class="contain" data-src="https://en.wikipedia.org/wiki/Comparison_of_browser_engines_(HTML_support)">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="41" data-src="slides/google-dom-3">
+        <h2 hidden="" aria-hidden="false">Google DOM</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          <img src="slides/google-dom-3/google-dom-3.png" alt="Google DOM" class="contain" data-src="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="42" data-src="slides/google-dom-4">
+        <h2 hidden="" aria-hidden="false">Google DOM</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          <img src="slides/google-dom-4/google-dom-4.png" alt="Google DOM" class="contain" data-src="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="43" data-src="slides/google-cssom">
+        <h2 hidden="" aria-hidden="false">Google CSSOM</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          <img src="slides/google-cssom/google-cssom.png" alt="Google CSSOM" class="contain" data-src="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="44" data-src="slides/google-cssom-2">
+        <h2 hidden="" aria-hidden="false">Google CSSOM</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          <img src="slides/google-cssom-2/google-cssom-2.png" alt="Google CSSOM" class="contain" data-src="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="45" data-src="slides/google-a11y-tree">
+        <h2 hidden="" aria-hidden="false">Google A11y Tree</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">
+          <img src="slides/google-a11y-tree/google-a11y-tree.png" alt="Google A11y Tree" class="contain" data-src="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="46" data-src="slides/google-a11y-tree-5">
+        <h2 hidden="" aria-hidden="false">Google A11y Tree</h2>
+        <figure>
+          <a href="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">
+          <img src="slides/google-a11y-tree-5/google-a11y-tree-5.png" alt="Google A11y Tree" class="contain" data-src="https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="47" data-src="slides/javascript-engines">
+        <h2 hidden="" aria-hidden="false">JavaScript Engines</h2>
+        <figure>
+          <a href="https://en.wikipedia.org/wiki/JavaScript_engine">
+          <img src="slides/javascript-engines/javascript-engines.png" alt="JavaScript Engines" class="contain" data-src="https://en.wikipedia.org/wiki/JavaScript_engine">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="48" data-src="slides/heavy-cream">
+        <h2 hidden="" aria-hidden="false">Heavy Cream</h2>
+        <figure>
+          <a href="https://www.myrecipes.com/extracrispy/this-diy-heavy-cream-substitute-has-only-two-ingredients">
+          <img src="slides/heavy-cream/heavy-cream.jpg" alt="Heavy Cream" class="contain" data-src="https://www.myrecipes.com/extracrispy/this-diy-heavy-cream-substitute-has-only-two-ingredients">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section id="49" data-src="slides/fresh-butter">
+        <h2 hidden="" aria-hidden="false">Fresh Butter</h2>
+        <figure>
+          <a href="http://maxumfoods.com/amf-leads-dairy-price-ease/">
+          <img src="slides/fresh-butter/fresh-butter.jpg" alt="Fresh Butter" class="contain" data-src="http://maxumfoods.com/amf-leads-dairy-price-ease/">
+          </a>
+
+          <figcaption>
+            <p>
+            
+            </p>
+
+          </figcaption>
+        </figure>
+      </section>
+      <section class="main-title" id="50" data-src="slides/title">
+        <h2 hidden="" aria-hidden="false">Deconstructing the Modern Web Browser</h2>
+        <figure>
+          <div class="banner">
+            Deconstructing the Modern Web Browser 
+            <div class="subtitle">
+            </div>
+            <div class="bio">
+              <br>
+              Scott Davis<br>
+              <a href="mailto:scott@thirstyhead.com">scott@thirstyhead.com</a><br>
+              <a href="https://twitter.com/scottdavis99">@scottdavis99</a>
+            </div>
+          </div>
+          <figcaption>
+            <p>
+            </p>
+            <p>
+              Presented by Scott Davis. His email address is
+              scott@thirstyhead.com. His Twitter handle is @scottdavis99.
+            </p>
+          </figcaption>
+        </figure>
+      </section>
+
+    </main>
+
+    <script src="js/talk-o-vision.js"></script>
+  
+
+</body></html>
